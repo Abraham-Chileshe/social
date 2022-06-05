@@ -357,7 +357,6 @@
                 </div>
                 ";
             }else{
-            
                 $get_skills = mysqli_query($con,"SELECT * from user_hobbies WHERE userId='$userid' order by hobby_Id desc LIMIT 4");
                 while($row=mysqli_fetch_array($get_skills)){
                 $hobby_name = $row['hobby'];
