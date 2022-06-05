@@ -1,5 +1,6 @@
 <?php 
     include "../database/session.php";
+    include "inc/getting_data.php";
 
 ?>
 
@@ -364,7 +365,7 @@
                 $dtime = $row['dtime'];
                 extract($row);
                 
-                    echo '
+                echo '
                     <div class="col-lg-6 col-xs-12 mt-4">
                         <div class="bg-clr-white hover-box">
                             <div class="row">
@@ -392,10 +393,6 @@
                     </div>';
                 }
             }
-
-            
-
-
         ?>
             
         </div>
