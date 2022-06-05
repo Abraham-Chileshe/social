@@ -1,6 +1,6 @@
 <?php 
     include "../database/session.php";
-    include "inc/getting_data.php";
+
 ?>
 
 <!DOCTYPE html>
