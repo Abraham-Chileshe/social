@@ -350,40 +350,51 @@
         </div>
         <div class="row">
         <?php
-            $get_skills = mysqli_query($con,"SELECT * from user_hobbies WHERE userId='$userid' order by hobby_Id desc LIMIT 4");
-            while($row=mysqli_fetch_array($get_skills)){
-            $hobby_name = $row['hobby'];
-            $hobby_img = $row['img'];
-            $dtime = $row['dtime'];
-            extract($row);
+            if($num_of_hobbies == NULL){
+                echo "
+                <div class='col-lg-12 col-xs-12 mt-4'>
+                <center><h4>You don't have any hobbies and skills set up</h4></center>
+                </div>
+                ";
+            }else{
             
-                echo '
-                <div class="col-lg-6 col-xs-12 mt-4">
-                    <div class="bg-clr-white hover-box">
-                        <div class="row">
-                            <div class="col-sm-5 col-xs-12 position-relative">
-                                <a href="#blog-single.html" class="image-mobile">
-                                    <center><img class="hobby-profile card-img-bottom d-block radius-image-full" src="usr_images/'.$email.'/hobbies/'.$hobby_img.'"
-                                        alt="Hobby_image"></center>
-                                </a>
-                            </div>
-                            <div class="col-sm-7 col-xs-12 card-body blog-details align-self">
-                                <a href="#blog-single.html" class="blog-desc">'.$hobby_name.'
-                                </a>
-                                <div class="mt-1 align-items-center">
-                                  <ul class="blog-meta ">
-                                        
-                                        <li class="mt-1 meta-item blog-lesson">
-                                            <span class="fa fa-clock-o"></span>
-                                            <span class="meta-value"> '.$dtime.' </span>. 
-                                        </li>
-                                    </ul>
+                $get_skills = mysqli_query($con,"SELECT * from user_hobbies WHERE userId='$userid' order by hobby_Id desc LIMIT 4");
+                while($row=mysqli_fetch_array($get_skills)){
+                $hobby_name = $row['hobby'];
+                $hobby_img = $row['img'];
+                $dtime = $row['dtime'];
+                extract($row);
+                
+                    echo '
+                    <div class="col-lg-6 col-xs-12 mt-4">
+                        <div class="bg-clr-white hover-box">
+                            <div class="row">
+                                <div class="col-sm-5 col-xs-12 position-relative">
+                                    <a href="#blog-single.html" class="image-mobile">
+                                        <center><img class="hobby-profile card-img-bottom d-block radius-image-full" src="usr_images/'.$email.'/hobbies/'.$hobby_img.'"
+                                            alt="Hobby_image"></center>
+                                    </a>
+                                </div>
+                                <div class="col-sm-7 col-xs-12 card-body blog-details align-self">
+                                    <a href="#blog-single.html" class="blog-desc">'.$hobby_name.'
+                                    </a>
+                                    <div class="mt-1 align-items-center">
+                                    <ul class="blog-meta ">
+                                            
+                                            <li class="mt-1 meta-item blog-lesson">
+                                                <span class="fa fa-clock-o"></span>
+                                                <span class="meta-value"> '.$dtime.' </span>. 
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>';
+                    </div>';
+                }
             }
+
+            
 
 
         ?>
