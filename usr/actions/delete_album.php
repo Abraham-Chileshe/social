@@ -3,7 +3,7 @@
       include "../inc/getting_data.php";
 
       $ide = $_GET['album_name'];
-      $album_name = $ide.'-'.$userid;
+      $album_name = $ide;
       
       $del_album = mysqli_query($con,"DELETE FROM photo_albums WHERE album_name='$album_name'");
   
@@ -22,3 +22,4 @@
       }
      
 ?>
+

@@ -1,3 +1,5 @@
+<div class="se-pre-con"></div> <!--pre screen loader -->
+
 <header class="w3l-header">
 	<div class="container">
 	<!--/nav-->
@@ -14,7 +16,7 @@
 			<nav class="mx-auto">
 				<div class="search-bar">
 					<form class="search">
-						<input type="search" class="search__input" name="search" placeholder="Discover posts, people, videos etc." onload="equalWidth()" required>
+						<input type="search" class="search__input w-100" name="search" placeholder="Discover posts, people, videos etc." onload="equalWidth()" required>
 						<span class="fa fa-search search__icon"></span>
 					</form>
 				</div>
@@ -34,7 +36,7 @@
 						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
 							data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 							<h5 class="d-none d-sm-block d-md-none d-block d-sm-none">More</h5>
-							<span class="fa fa-circle d-none d-md-block mt-1"  style="font-size:22px"></span>
+							<span class="fa fa-circle d-none d-md-block mt-1"  style="font-size:22px; "></span>
 						</a>
 						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
 							<a class="dropdown-item @@b__active" href="beauty.html">Beauty</a>

@@ -36,7 +36,8 @@ ALTER TABLE users
 CREATE TABLE photo_albums(
   albumId int(11) PRIMARY KEY AUTO_INCREMENT,
   userId int(11) NOT NULL,
-  album_name varchar(30) NOT NULL UNIQUE
+  album_name varchar(30) NOT NULL UNIQUE,
+  album_picture varchar(30) NOT NULL 
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 ALTER TABLE photo_albums

@@ -17,9 +17,7 @@
     $data_acc = mysqli_fetch_array($acc_relation);
     $email = $data_acc['email']; 
 
-    $get_albums = mysqli_query($con,"SELECT * from photo_albums WHERE userId='$userid' order by albumId desc ");
-    $get_alb = mysqli_fetch_array($get_albums);
-    $album_name = $get_alb['album_name'];
+    
 
     $Pimg = "profile".$userid;
     $Cimg = "cover".$userid;
@@ -29,5 +27,5 @@
     $get_hobbies = mysqli_query($con,"SELECT * from user_hobbies WHERE userId='$userid'");
     $num_of_hobbies = mysqli_num_rows($get_hobbies);
 
-
 ?>
+
